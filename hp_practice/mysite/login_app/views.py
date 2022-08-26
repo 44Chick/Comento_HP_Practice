@@ -32,7 +32,7 @@ def login_view(request):
             if user:
                 login(request, user)
                 if next == 'None':
-                    return redirect(to='/login/user/')
+                    return redirect(to='../')
                 else:
                     return redirect(to=next)
     else:

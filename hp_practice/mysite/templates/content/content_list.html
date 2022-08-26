@@ -1,0 +1,17 @@
+{% extends "product.html" %}
+{% block content %}
+    {% if content_list %}
+    <div style="background-color:aliceblue">
+        <h1>Product List</h1>
+
+    </div>
+        <ul>
+            {% for content in content_list %}
+                <li><a href="../{{content.id}}">{{content.title}}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No Content are availavble.</p>
+    {% endif %}
+
+{% endblock %}
